@@ -27,9 +27,9 @@ jobs:
         run: python skills/immo-init/scripts/verifier-mallette.py skills --moteur || test $? -eq 1
       - name: Versions conformes à l'étiquette
         run: python .github/scripts/versions.py --verifier --etiquette "${GITHUB_REF_NAME}"
-      - name: Fabriquer les cinq ZIP
+      - name: Fabriquer les cinq outils, en .zip et en .skill
         run: python .github/scripts/empaqueter.py dist
       - name: Publier la version
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" dist/*.zip --title "Mallette ${GITHUB_REF_NAME}" --notes-file dist/notes.md
+        run: gh release create "${GITHUB_REF_NAME}" dist/*.zip dist/*.skill --title "Mallette ${GITHUB_REF_NAME}" --notes-file dist/notes.md

@@ -36,10 +36,19 @@
 
 Les mises à jour arrivent par la même marketplace. Les intitulés des menus peuvent varier selon la version de l'application : le [guide d'installation](docs/installer.md) détaille chaque cas.
 
-### Par fichiers ZIP, dans claude.ai
+### Par fichiers, dans claude.ai
 
-Téléchargez les cinq outils de la dernière version, puis importez-les un par un dans **Personnaliser › Compétences** :
-[immo-init](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-init.zip) · [immo-parcours](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-parcours.zip) · [immo-annonce](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-annonce.zip) · [immo-reseaux-sociaux](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-reseaux-sociaux.zip) · [immo-penser-savoir](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-penser-savoir.zip)
+Téléchargez les cinq outils de la dernière version — en `.zip` ou en `.skill`, c'est le même contenu —, puis importez-les un par un dans **Personnaliser › Compétences**, sans les décompresser :
+
+| Outil | Télécharger |
+|---|---|
+| immo-init | [.zip](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-init.zip) · [.skill](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-init.skill) |
+| immo-parcours | [.zip](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-parcours.zip) · [.skill](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-parcours.skill) |
+| immo-annonce | [.zip](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-annonce.zip) · [.skill](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-annonce.skill) |
+| immo-reseaux-sociaux | [.zip](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-reseaux-sociaux.zip) · [.skill](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-reseaux-sociaux.skill) |
+| immo-penser-savoir | [.zip](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-penser-savoir.zip) · [.skill](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest/download/immo-penser-savoir.skill) |
+
+Sur la [page des versions](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest), ne prenez pas les archives « Source code » : c'est le dépôt entier, pas un outil à importer.
 
 ### Claude Code
 
@@ -83,7 +92,7 @@ Cinq demandes, une par outil, avec ce qu'elles produisent : [les exemples](docs/
 ## Mettre à jour
 
 - **Par la marketplace** : vérifiez les mises à jour du plugin ; dans Claude Code, `/plugin marketplace update`.
-- **Par fichiers ZIP** : réimportez les outils de la [dernière version](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest).
+- **Par fichiers** (`.zip` ou `.skill`) : réimportez les outils de la [dernière version](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest).
 - Chaque outil connaît l'adresse de ce dépôt : demandez-lui « y a-t-il une mise à jour ? ».
 
 ## Pour les formateurs et les curieux
