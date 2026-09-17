@@ -31,10 +31,10 @@
 ### Claude Desktop ou claude.ai, par la place de marché — recommandé
 
 1. Dans Claude Desktop ou sur claude.ai, ouvrez **Personnaliser**, puis l'onglet **Plugins** — pas celui des connecteurs.
-2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`, puis validez : la synchronisation démarre.
+2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`, puis cliquez sur **Sync**.
 3. Sur la ligne **Mallette immo**, cliquez sur **Ajouter** : le plugin doit annoncer 5 compétences.
 
-Pour les mises à jour, resynchronisez cette place de marché depuis le même onglet. Les intitulés des menus peuvent varier selon la version de l'application : le [guide d'installation](docs/installer.md) détaille chaque cas.
+Les mises à jour arrivent par la synchronisation automatique de la place de marché : voir [Mettre à jour](#mettre-à-jour). Les intitulés des menus peuvent varier selon la version de l'application : le [guide d'installation](docs/installer.md) détaille chaque cas.
 
 ### Par fichiers, dans claude.ai
 
@@ -91,7 +91,7 @@ Cinq demandes, une par outil, avec ce qu'elles produisent : [les exemples](docs/
 
 ## Mettre à jour
 
-- **Par la place de marché** : resynchronisez-la dans **Personnaliser › Plugins**. Dans Claude Code, en terminal : `claude plugin marketplace update sebastien-grillot`, puis `claude plugin update mallette-immo@sebastien-grillot`, puis redémarrez Claude Code.
+- **Par la place de marché** : dans Claude Desktop et sur claude.ai, les mises à jour arrivent par la synchronisation automatique de la place de marché (*Automatically sync*) ; la fiche du plugin affiche sa version, à comparer au badge de version en haut de cette page. Inutile de réajouter la place de marché : l'application répond qu'elle est déjà ajoutée. Dans Claude Code, en terminal : `claude plugin marketplace update sebastien-grillot`, puis `claude plugin update mallette-immo@sebastien-grillot`, puis redémarrez Claude Code.
 - **Par fichiers** (`.zip` ou `.skill`) : réimportez les outils de la [dernière version](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest).
 - Chaque outil connaît l'adresse de ce dépôt : demandez-lui « y a-t-il une mise à jour ? ».
 

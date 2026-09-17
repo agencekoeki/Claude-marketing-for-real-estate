@@ -9,7 +9,7 @@
 ## 1. Claude Desktop ou claude.ai, par la place de marché — recommandé
 
 1. Ouvrez **Personnaliser**, puis l'onglet **Plugins**. Pas l'onglet des connecteurs : son bouton d'ajout demande l'adresse d'un serveur MCP, ce n'est pas le bon endroit.
-2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`, puis validez : la synchronisation démarre.
+2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`, puis cliquez sur **Sync**.
 3. Sur la ligne **Mallette immo**, cliquez sur **Ajouter** : les cinq outils arrivent ensemble, et le plugin doit annoncer 5 compétences.
 
 Les intitulés changent d'une version de l'application à l'autre. Si vous ne trouvez pas le menu, passez par les fichiers ci-dessous : le résultat est le même, seules les mises à jour se font à la main.
@@ -53,6 +53,6 @@ Tapez « / » et choisissez **immo-init**. L'outil vérifie l'environnement, pos
 
 ## Mettre à jour
 
-- **Place de marché** : resynchronisez-la dans **Personnaliser › Plugins**. Dans Claude Code, en terminal : `claude plugin marketplace update sebastien-grillot` rafraîchit le catalogue, puis `claude plugin update mallette-immo@sebastien-grillot` met le plugin à jour ; redémarrez Claude Code pour l'appliquer.
+- **Place de marché** : dans Claude Desktop et sur claude.ai, les mises à jour arrivent par la synchronisation automatique de la place de marché (*Automatically sync*) ; la fiche du plugin affiche sa version, à comparer au badge de version en haut du [README](../README.md). Inutile de réajouter la place de marché : l'application répond qu'elle est déjà ajoutée. Dans Claude Code, en terminal : `claude plugin marketplace update sebastien-grillot` rafraîchit le catalogue, puis `claude plugin update mallette-immo@sebastien-grillot` met le plugin à jour ; redémarrez Claude Code pour l'appliquer.
 - **Fichiers** (`.zip` ou `.skill`) : réimportez les outils de la [dernière version](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest).
 - Ou demandez à n'importe quel outil : « y a-t-il une mise à jour ? ».
