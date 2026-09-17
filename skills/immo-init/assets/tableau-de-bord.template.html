@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ton espace</title>
+<!-- Coque commune de la mallette : bandeau d'état, à faire, le principal, rangé. Même ordre partout. -->
+<style>
+:root{--encre:#14213D;--papier:#EDEFF2;--trait:#A8B2C0;--tampon:#7A2E3B;--pose:#3F6B4F;--carte:#FFF;--gris:#5A6678;--alerte:#8A5A1E}
+@media (prefers-color-scheme:dark){:root{--encre:#E8EBF0;--papier:#11161F;--trait:#3A4556;--tampon:#D98A98;--pose:#7FB394;--carte:#1A2230;--gris:#95A0B0;--alerte:#D9A85A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:"Inter","Segoe UI",Roboto,-apple-system,Arial,sans-serif;font-size:16px;line-height:1.55}
+.w{max-width:52rem;margin:0 auto;padding:1.6rem 1.5rem 2.5rem}
+/* zone 1 — bandeau d'état */
+.etat{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.etat h1{font-size:1.35rem;font-weight:600;margin:0;letter-spacing:-.015em}
+.etat .sous{font-size:.78rem;color:var(--gris);margin-top:.15rem}
+.puces{display:flex;gap:.4rem;flex-wrap:wrap}
+.puce{font-size:.76rem;border:1px solid var(--trait);padding:.15rem .6rem;color:var(--gris);white-space:nowrap}
+.puce.a{color:var(--alerte);border-color:var(--alerte)}
+.puce.ok{color:var(--pose);border-color:var(--pose)}
+/* zone 3 — à faire, toujours avant le corps long */
+.afaire{background:var(--carte);border:1px solid var(--trait);border-left:3px solid var(--alerte);padding:.8rem 1rem;margin-bottom:1.1rem}
+.afaire b.t{display:block;font-size:.72rem;color:var(--gris);font-weight:600;margin-bottom:.4rem}
+.afaire p{margin:0 0 .3rem;font-size:.9rem}
+.afaire p:last-child{margin:0}
+.afaire p span{color:var(--gris)}
+.afaire.vide{border-left-color:var(--pose)}
+/* zone 2 — le principal */
+h2{font-size:.72rem;font-weight:600;color:var(--gris);margin:1.1rem 0 .55rem}
+.carte{background:var(--carte);border:1px solid var(--trait);padding:.95rem 1.1rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;align-items:start}
+.duo.l{grid-template-columns:1.45fr 1fr}
+.duo.r{grid-template-columns:1fr 1.45fr}
+@media(max-width:700px){.duo,.duo.l,.duo.r{grid-template-columns:1fr}}
+.g{color:var(--gris)}.p{color:var(--pose)}.a{color:var(--alerte)}.t{color:var(--tampon)}
+.mono{font-variant-numeric:tabular-nums;font-size:.78rem;color:var(--gris)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;font-size:.7rem;color:var(--gris);font-weight:600;padding:0 .6rem .4rem 0;border-bottom:2px solid var(--encre)}
+td{padding:.5rem .6rem .5rem 0;border-bottom:1px solid var(--trait);vertical-align:top}
+.jauge{display:block;height:3px;background:var(--trait)}.jauge i{display:block;height:3px;background:var(--pose)}
+/* zone 4 — rangé */
+.range{border-top:1px solid var(--trait);margin-top:1.3rem;padding-top:.7rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.76rem;color:var(--gris)}
+@media print{body{background:#fff}.w{max-width:none;padding:0}}
+</style></head><body>
+<div class="w">
+
+  <div class="etat">
+    <div><h1>Ton espace</h1><div class="sous">mis à jour le [DATE — celle du jour, écrite par l'outil] · par [L'OUTIL QUI ÉCRIT]</div></div>
+    <div class="puces"><span class="puce a">[N] choses t'attendent <!-- = nombre de lignes de la zone À FAIRE --></span><span class="puce ">profil [N] % <!-- = lignes marquées [dit]/[vu] ÷ lignes marquées au total dans profil.md --></span><span class="puce ">[N] outils installés <!-- = sous-dossiers de .claude/skills/ --></span></div>
+  </div>
+
+  <div class="afaire"><b class="t">À FAIRE, DANS L'ORDRE</b><p><b>[UNE ANNONCE DONT annonce.md PORTE UNE MENTION VIDE OU statut: brouillon]</b> <span>· bloque la mise en ligne</span> <!-- source : 01_BIENS/*/annonce.md, section « à compléter » non vide --></p><p><b>[UN BROUILLON DE 02_PUBLICATIONS/brouillons/]</b> <span>· attend depuis [AUJOURD'HUI − date_ecriture] j</span> <!-- source : frontmatter date_ecriture ; si vide, date du fichier --></p><p><b>[UNE TÂCHE DONT LA DATE DE CONTRÔLE EST PASSÉE OU PROCHE]</b> <span>· contrôle prévu le [DATE]</span> <!-- source : recurrences.md, colonne Contrôle de lecture --></p></div>
+
+  <!-- RÈGLE : chaque valeur vient d'un fichier ou d'un calcul sur un fichier. Si la source est
+       vide, on écrit « — ». Jamais un chiffre plausible. Jamais un chiffre de la conversation
+       qui n'a pas été écrit dans un fichier. -->
+  <div class="duo">
+    <div class="carte">
+      <div style="display:flex;justify-content:space-between" class="mono"><span>ANNONCES</span><span>[N] en ligne · [N] à publier <!-- = annonce.md avec statut: en ligne / statut: brouillon --></span></div>
+      <div style="font-size:.88rem;line-height:1.7;margin-top:.4rem">
+        <!-- une ligne par 01_BIENS/*/annonce.md, statut ≠ parti -->
+        <div><span class="p">●</span> [champ bien] <span class="g">· en ligne depuis [AUJOURD'HUI − date_mise_en_ligne] j · [champ visites, ou rien si vide]</span></div>
+        <div><span class="a">●</span> [champ bien] <span class="g">· [ce que la section « à compléter » contient]</span></div>
+      </div>
+    </div>
+    <div class="carte">
+      <div style="display:flex;justify-content:space-between" class="mono"><span>PUBLICATIONS</span><span>[N] brouillon · [N] sujets en réserve <!-- = fichiers de brouillons/ ; lignes de la table « À écrire » de carnet.md --></span></div>
+      <div style="font-size:.88rem;line-height:1.7;margin-top:.4rem">
+        <div><span class="a">●</span> [titre de travail du brouillon] <span class="g">· attend depuis [N] j</span></div>
+        <div><span class="g">○</span> Carnet : [N] sujets, [N] attendent quelque chose <!-- = lignes dont « il te faut » ≠ rien --></div>
+        <div><span class="g">○</span> Dernière publication il y a [AUJOURD'HUI − max(date_publication) dans publies/] j <!-- si publies/ vide : « aucune publication enregistrée » --></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="duo" style="margin-top:.9rem">
+    <div class="carte" style="border-left:3px solid var(--pose)">
+      <div class="mono">CE QUI TOURNE SANS TOI</div>
+      <!-- source : recurrences.md, table « installées ». Si vide : « rien d'installé pour l'instant » -->
+      <div style="font-size:.92rem;margin-top:.3rem"><b>[colonne Nom]</b> · [colonne Cadence], [colonne Heure]</div>
+      <div class="g" style="font-size:.8rem">Depuis le [colonne Depuis] · contrôle de lecture le [colonne Contrôle de lecture]</div>
+    </div>
+    <div class="carte">
+      <div class="mono">TON PROFIL</div>
+      <!-- chaque % = lignes [dit]/[vu] ÷ lignes marquées, comptées dans le fichier. Si le fichier n'existe pas : « — » -->
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;font-size:.88rem;margin-top:.3rem"><span>profil <b>[N] %</b></span><span>voix <b>[N] %</b></span><span>cadre <b>[N] %</b></span><span>clients <b>[N] %</b></span></div>
+      <div class="g" style="font-size:.8rem;margin-top:.2rem">[le fichier au % le plus bas], et ce qu'il bloque <!-- cadre bas → bloque les annonces ; voix bas → textes au plus neutre ; clients bas → écrit large --></div>
+    </div>
+  </div>
+
+
+  <div class="range"><span>[chemin du dossier] · [N] outils installés · miroir du projet : [date de l'en-tête d'état, ou « jamais »]</span><span>pour recommencer : ouvre ton projet et tape /immo-…</span></div>
+
+</div></body></html>

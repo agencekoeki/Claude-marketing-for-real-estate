@@ -1,0 +1,12 @@
+{
+  "mallette": "2.5.1",
+  "outils": {
+    "immo-init": "8.1",
+    "immo-parcours": "1.10",
+    "immo-annonce": "3.9",
+    "immo-reseaux-sociaux": "10.3",
+    "immo-penser-savoir": "1.1"
+  },
+  "depot": "https://github.com/agencekoeki/Claude-marketing-for-real-estate",
+  "telechargements": "https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest"
+}

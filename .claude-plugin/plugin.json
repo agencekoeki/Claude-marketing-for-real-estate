@@ -1,0 +1,21 @@
+{
+  "name": "mallette-immo",
+  "version": "2.5.1",
+  "description": "Cinq outils pour agents immobiliers : installer son profil, creuser ses clients types et son parcours, écrire ses annonces, préparer ses réseaux sociaux et ses carrousels, trier ce qui est su de ce qui est supposé.",
+  "author": {
+    "name": "Sébastien Grillot",
+    "email": "hello@boostacademy.ai",
+    "url": "https://sebastiengrillot.com/a-propos/"
+  },
+  "homepage": "https://github.com/agencekoeki/Claude-marketing-for-real-estate",
+  "repository": "https://github.com/agencekoeki/Claude-marketing-for-real-estate",
+  "license": "GPL-3.0-only",
+  "keywords": [
+    "immobilier",
+    "agent-immobilier",
+    "real-estate",
+    "marketing",
+    "reseaux-sociaux",
+    "annonce-immobiliere"
+  ]
+}

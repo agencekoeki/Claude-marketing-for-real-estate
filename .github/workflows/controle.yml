@@ -1,0 +1,27 @@
+name: Contrôle de la mallette
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validateur officiel de plugins, catalogue puis plugin et ses skills
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate --strict .
+          mkdir -p /tmp/plugin && cp -r .claude-plugin skills /tmp/plugin/ && rm /tmp/plugin/.claude-plugin/marketplace.json
+          claude plugin validate --strict /tmp/plugin
+      - name: Bibliothèques du moteur de visuels
+        run: python -m pip install reportlab pillow pypdf
+      - name: Contrôle de la mallette, avec l'essai du moteur
+        run: python skills/immo-init/scripts/verifier-mallette.py skills --moteur || test $? -eq 1
+      - name: Versions et catalogue conformes aux SKILL.md
+        run: python .github/scripts/versions.py --verifier

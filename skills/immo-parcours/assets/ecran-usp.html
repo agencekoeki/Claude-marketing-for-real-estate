@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ton USP sur le parcours</title>
+<!-- Coque commune de la mallette : bandeau d'état, à faire, le principal, rangé. Même ordre partout. -->
+<style>
+:root{--encre:#14213D;--papier:#EDEFF2;--trait:#A8B2C0;--tampon:#7A2E3B;--pose:#3F6B4F;--carte:#FFF;--gris:#5A6678;--alerte:#8A5A1E}
+@media (prefers-color-scheme:dark){:root{--encre:#E8EBF0;--papier:#11161F;--trait:#3A4556;--tampon:#D98A98;--pose:#7FB394;--carte:#1A2230;--gris:#95A0B0;--alerte:#D9A85A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:"Inter","Segoe UI",Roboto,-apple-system,Arial,sans-serif;font-size:16px;line-height:1.55}
+.w{max-width:52rem;margin:0 auto;padding:1.6rem 1.5rem 2.5rem}
+/* zone 1 — bandeau d'état */
+.etat{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.etat h1{font-size:1.35rem;font-weight:600;margin:0;letter-spacing:-.015em}
+.etat .sous{font-size:.78rem;color:var(--gris);margin-top:.15rem}
+.puces{display:flex;gap:.4rem;flex-wrap:wrap}
+.puce{font-size:.76rem;border:1px solid var(--trait);padding:.15rem .6rem;color:var(--gris);white-space:nowrap}
+.puce.a{color:var(--alerte);border-color:var(--alerte)}
+.puce.ok{color:var(--pose);border-color:var(--pose)}
+/* zone 3 — à faire, toujours avant le corps long */
+.afaire{background:var(--carte);border:1px solid var(--trait);border-left:3px solid var(--alerte);padding:.8rem 1rem;margin-bottom:1.1rem}
+.afaire b.t{display:block;font-size:.72rem;color:var(--gris);font-weight:600;margin-bottom:.4rem}
+.afaire p{margin:0 0 .3rem;font-size:.9rem}
+.afaire p:last-child{margin:0}
+.afaire p span{color:var(--gris)}
+.afaire.vide{border-left-color:var(--pose)}
+/* zone 2 — le principal */
+h2{font-size:.72rem;font-weight:600;color:var(--gris);margin:1.1rem 0 .55rem}
+.carte{background:var(--carte);border:1px solid var(--trait);padding:.95rem 1.1rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;align-items:start}
+.duo.l{grid-template-columns:1.45fr 1fr}
+.duo.r{grid-template-columns:1fr 1.45fr}
+@media(max-width:700px){.duo,.duo.l,.duo.r{grid-template-columns:1fr}}
+.g{color:var(--gris)}.p{color:var(--pose)}.a{color:var(--alerte)}.t{color:var(--tampon)}
+.mono{font-variant-numeric:tabular-nums;font-size:.78rem;color:var(--gris)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;font-size:.7rem;color:var(--gris);font-weight:600;padding:0 .6rem .4rem 0;border-bottom:2px solid var(--encre)}
+td{padding:.5rem .6rem .5rem 0;border-bottom:1px solid var(--trait);vertical-align:top}
+.jauge{display:block;height:3px;background:var(--trait)}.jauge i{display:block;height:3px;background:var(--pose)}
+/* zone 4 — rangé */
+.range{border-top:1px solid var(--trait);margin-top:1.3rem;padding-top:.7rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.76rem;color:var(--gris)}
+@media print{body{background:#fff}.w{max-width:none;padding:0}}
+</style></head><body>
+<div class="w">
+
+  <div class="etat">
+    <div><h1>Ton USP, posée sur le parcours</h1><div class="sous">[LA PHRASE, SECTION 4]</div></div>
+    <div class="puces"><span class="puce ">immo-parcours · 3 / 3</span><span class="puce a">[N] étapes où on ne voit pas que c'est toi <!-- = étapes vendeur sans comportement posé --></span></div>
+  </div>
+
+  <div class="afaire"><b class="t">À FAIRE, DANS L'ORDRE</b><p><b>[L'ÉTAPE OÙ TU PERDS ET OÙ AUCUN COMPORTEMENT NE SE VOIT]</b> <span>· c'est là que tu es un agent comme les autres</span> <!-- source : croisement « où je le perds » × étapes sans comportement --></p><p><b>[UN COMPORTEMENT QU'AUCUNE ÉTAPE N'ACCUEILLE]</b> <span>· une intention, pas un comportement — à toi de trancher</span> <!-- source : comportement de la section 4 sans étape --></p></div>
+
+  <style>
+  .rail{display:grid;grid-template-columns:repeat(9,1fr);gap:.3rem}
+  @media(max-width:760px){.rail{grid-template-columns:repeat(3,1fr)}}
+  .pas{border:1px solid var(--trait);padding:.5rem .4rem;min-height:7rem;position:relative;font-size:.72rem;line-height:1.25}
+  .pas.avec{background:var(--carte);border-color:var(--pose);border-width:2px}
+  .pas.sans{border-style:dashed;color:var(--gris)}
+  .pas b{display:block;margin-bottom:.2rem}
+  .pas span{display:block;font-weight:600;color:var(--encre);margin-bottom:.4rem}
+  .pas.sans span{color:var(--gris)}
+  .pas i{display:block;font-style:normal;color:var(--pose);font-weight:550}
+  .pas.sans i{display:none}
+  </style>
+  <h2 style="margin-top:0">LE PARCOURS VENDEUR — en vert, l'étape où un de tes trois comportements se voit</h2>
+  <div class="rail">
+      <div class="pas [avec | sans]" data-n="1"><b class="mono">1</b><span>Il y pense</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="2"><b class="mono">2</b><span>L'estimation</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="3"><b class="mono">3</b><span>Le choix de l'agent</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="4"><b class="mono">4</b><span>Le mandat</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="5"><b class="mono">5</b><span>La mise en vente</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="6"><b class="mono">6</b><span>Les visites</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="7"><b class="mono">7</b><span>L'offre</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="8"><b class="mono">8</b><span>Le compromis et l'acte</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+      <div class="pas [avec | sans]" data-n="9"><b class="mono">9</b><span>Après</span><i>[COMPORTEMENT POSÉ ICI — ou rien]</i></div>
+  </div>
+  <div class="carte" style="margin-top:.9rem;border-left:3px solid var(--tampon)">
+    <div class="mono">TES TROIS COMPORTEMENTS · OÙ ILS DÉCIDENT</div>
+    <table style="margin-top:.4rem"><tr><th>Comportement</th><th>Étape où ça décide</th><th>Prouvé par</th></tr>
+    <tr><td>[COMPORTEMENT 1]</td><td>[N] [NOM]</td><td class="g">[DOSSIER, SANS NOM]</td></tr>
+    <tr><td>[COMPORTEMENT 2]</td><td>[N] [NOM]</td><td class="g">[—]</td></tr>
+    <tr><td>[COMPORTEMENT 3]</td><td class="a">[aucune — une intention]</td><td class="g">[—]</td></tr></table>
+  </div>
+  <p class="g" style="font-size:.78rem;margin:.8rem 0 0;max-width:42em">Une étape en pointillé est une étape où le vendeur n'a aucune raison de te préférer. Ce n'est pas un défaut à combler avec un comportement inventé : c'est là qu'on cherche, dans tes dossiers, ce que tu fais déjà sans le savoir.</p>
+
+
+  <div class="range"><span>00_MOI/profil.md · section 4, et le parcours vendeur</span><span>on ne l'annonce pas, on la démontre</span></div>
+
+</div></body></html>

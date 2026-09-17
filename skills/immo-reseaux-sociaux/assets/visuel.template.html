@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visuel à publier — gabarit de secours</title>
+<!-- ═══ IDENTITÉ — à régler une fois, valeurs dans 00_MOI/cadre.md ═══
+     --dominante : sa couleur principale. --accent : celle qui souligne, une seule.
+     Si rien n'est renseigné, les valeurs par défaut sont neutres — dis-le en livrant. -->
+<style>
+:root{
+  /* IDENTITÉ */
+  --dominante:#14213D;   /* [SA COULEUR PRINCIPALE] */
+  --accent:#7A2E3B;      /* [SA COULEUR D'ACCENT] */
+--papier:#EDEFF2;--trait:#A8B2C0;--pose:#3F6B4F;--carte:#FFF;--gris:#5A6678}
+*{box-sizing:border-box}
+body{margin:0;background:#D7DCE3;color:var(--dominante);font-family:"Inter","Segoe UI",Roboto,-apple-system,Arial,sans-serif;display:flex;justify-content:center;padding:1.5rem}
+/* format carré : c'est ce qui sera capturé */
+/* Corps de base : 32 px sur 1080, pour que le texte courant ne descende jamais sous 40 px */
+.v{width:1080px;max-width:100%;aspect-ratio:1/1;background:var(--carte);padding:8.33%;display:flex;flex-direction:column;justify-content:space-between;font-size:min(32px,2.963vw)}
+.v h1{font-size:2.4em;line-height:1.15;font-weight:650;letter-spacing:-.02em;margin:0;max-width:16em}
+.pied{display:flex;justify-content:space-between;align-items:flex-end;font-size:1.1em;color:var(--gris);border-top:2px solid var(--trait);padding-top:.7em}
+
+/* 1. tableau comparatif ou idée reçue contre réalité */
+table{width:100%;border-collapse:collapse;font-size:1.25em}
+th{text-align:left;font-size:.9em;color:var(--gris);font-weight:600;padding-bottom:.5em;border-bottom:2px solid var(--dominante)}
+td{padding:.7em 0;border-bottom:1px solid var(--trait);vertical-align:top}
+td:first-child{color:var(--gris);padding-right:1.2em}
+td.f{font-weight:600}
+
+/* 2. chronologie */
+.chrono{list-style:none;padding:0;margin:0;font-size:1.25em}
+.chrono li{display:flex;gap:1em;padding:.6em 0;border-bottom:1px solid var(--trait)}
+.chrono b{flex:none;width:5.5em;color:var(--accent);font-weight:650}
+
+/* 3. chiffre isolé */
+.chiffre{font-size:7em;font-weight:700;line-height:1;letter-spacing:-.04em;color:var(--accent);margin:0}
+.chiffre + p{font-size:1.5em;max-width:14em;margin:.3em 0 0}
+
+/* 4. liste de contrôle */
+.check{list-style:none;padding:0;margin:0;font-size:1.3em}
+.check li{padding:.55em 0 .55em 1.9em;border-bottom:1px solid var(--trait);position:relative}
+.check li:before{content:"";position:absolute;left:0;top:1em;width:1.1em;height:1.1em;border:2px solid var(--pose)}
+</style></head><body>
+
+<div class="v">
+  <h1>[LE TITRE, UNE PHRASE COURTE]</h1>
+
+  <!-- Garde UN SEUL des quatre blocs ci-dessous et supprime les autres.
+       Jamais plus de six lignes de contenu : ce visuel sera vu en vignette. -->
+
+  <table>
+    <tr><th>[CE QU'ON ENTEND]</th><th>[CE QUI EST VRAI]</th></tr>
+    <tr><td>[LIGNE]</td><td class="f">[LIGNE]</td></tr>
+    <tr><td>[LIGNE]</td><td class="f">[LIGNE]</td></tr>
+    <tr><td>[LIGNE]</td><td class="f">[LIGNE]</td></tr>
+  </table>
+
+  <!--
+  <ol class="chrono">
+    <li><b>[DURÉE]</b>[ÉTAPE]</li>
+    <li><b>[DURÉE]</b>[ÉTAPE]</li>
+    <li><b>[DURÉE]</b>[ÉTAPE]</li>
+    <li><b>[DURÉE]</b>[ÉTAPE]</li>
+  </ol>
+
+  <div><p class="chiffre">[LE CHIFFRE]</p><p>[CE QU'IL SIGNIFIE]</p></div>
+
+  <ul class="check">
+    <li>[À FAIRE]</li><li>[À FAIRE]</li><li>[À FAIRE]</li><li>[À FAIRE]</li><li>[À FAIRE]</li>
+  </ul>
+  -->
+
+  <div class="pied">
+    <span>[SON NOM] · [SA COMMUNE]</span>
+    <span>[SOURCE ET DATE, SI UN CHIFFRE FIGURE]</span>
+  </div>
+</div>
+
+</body></html>

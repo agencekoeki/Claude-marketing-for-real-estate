@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carrousel — gabarit de secours, à exporter en PDF</title>
+<!-- ═══ IDENTITÉ — mêmes valeurs que les autres gabarits, dans 00_MOI/cadre.md ═══ -->
+<style>
+:root{
+  --dominante:#14213D;   /* [SA COULEUR PRINCIPALE] */
+  --accent:#7A2E3B;      /* [SA COULEUR D'ACCENT] */
+  --carte:#FFF;--trait:#A8B2C0;--gris:#5A6678;--pose:#3F6B4F;
+  /* grille commune à toutes les diapos : ne pas modifier d'une diapo à l'autre */
+  --marge:8.33%;          /* 90 px sur 1080 */
+  --marge-haut:11.11%;    /* 120 px : rien d'informatif au-dessus */
+  --marge-bas:23.15%;     /* 250 px : rien d'informatif sous 1100 px */
+}
+*{box-sizing:border-box}
+body{margin:0;background:#D7DCE3;font-family:"Inter","Segoe UI",Roboto,-apple-system,Arial,sans-serif;
+     color:var(--dominante);padding:1.5rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+
+/* 1080 x 1350 — portrait 4:5, le format qui occupe le plus de hauteur dans un fil */
+/* Corps de base : 32 px sur 1080, pour que le texte courant ne descende jamais sous 40 px */
+.d{width:1080px;max-width:100%;aspect-ratio:4/5;background:var(--carte);padding:var(--marge-haut) var(--marge) var(--marge-bas);font-size:min(32px,2.963vw);
+   display:flex;flex-direction:column;position:relative;overflow:hidden;
+   page-break-after:always;break-after:page}
+
+/* En-tête : numéro + barre d'avancement. Même place sur toutes les diapos. */
+.tete{display:flex;align-items:center;gap:1em;font-size:1.1em;color:var(--gris);
+      font-variant-numeric:tabular-nums;margin-bottom:auto}
+.jauge{flex:1;height:3px;background:var(--trait);position:relative}
+.jauge i{position:absolute;left:0;top:0;height:3px;background:var(--accent)}
+
+/* Corps : occupe le centre, jamais collé aux bords */
+.corps{flex:1;display:flex;flex-direction:column;justify-content:center;gap:.6em}
+
+/* Pied : identique partout, c'est lui qui rend la série reconnaissable */
+.pied{margin-top:auto;padding-top:.8em;border-top:2px solid var(--trait);
+      display:flex;justify-content:space-between;font-size:1.1em;color:var(--gris)}
+
+/* ——— VARIANTES DE DIAPO ——— */
+
+/* 1. COUVERTURE — une phrase, rien d'autre. Vue en vignette dans le fil. */
+.couv{background:var(--dominante);color:var(--carte)}
+.couv .tete,.couv .pied{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.3)}
+.couv .jauge{background:rgba(255,255,255,.3)}
+.couv h1{font-size:3.4em;line-height:1.1;font-weight:700;letter-spacing:-.025em;margin:0;max-width:12em}
+.couv .sous{font-size:1.3em;opacity:.8;margin:.6em 0 0;max-width:20em}
+
+/* 2. IDÉE — une seule par diapo */
+.idee h2{font-size:2.5em;line-height:1.15;font-weight:650;letter-spacing:-.018em;margin:0;max-width:14em}
+.idee p{font-size:1.4em;line-height:1.4;color:var(--gris);margin:0;max-width:22em}
+
+/* 3. DONNÉE — un chiffre, ou deux colonnes */
+.donnee .n{font-size:6.5em;font-weight:700;line-height:1;letter-spacing:-.04em;color:var(--accent);margin:0}
+.donnee .quoi{font-size:1.5em;margin:.2em 0 0;max-width:16em}
+.donnee table{width:100%;border-collapse:collapse;font-size:1.3em}
+.donnee th{text-align:left;font-size:.85em;color:var(--gris);font-weight:600;
+           padding-bottom:.5em;border-bottom:2px solid var(--dominante)}
+.donnee td{padding:.65em 0;border-bottom:1px solid var(--trait);vertical-align:top}
+.donnee td:first-child{color:var(--gris);padding-right:1.2em}
+
+/* 4. PHOTO — image plein cadre, légende en bas sur un bandeau */
+.photo{padding:0 0 var(--marge-bas);justify-content:flex-end}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo .legende{position:relative;background:var(--dominante);color:var(--carte);
+                padding:1.2em var(--marge);font-size:1.4em;line-height:1.3}
+.photo .tete{position:absolute;top:0;left:0;right:0;padding:var(--marge-haut) var(--marge) 0;color:var(--carte);
+             text-shadow:0 1px 3px rgba(0,0,0,.5)}
+
+/* 5. ÉTAPE — une ligne de temps, une étape par diapo */
+.etape .rang{font-size:1.1em;color:var(--accent);font-weight:650;letter-spacing:.06em}
+.etape h2{font-size:2.4em;line-height:1.15;font-weight:650;margin:.2em 0 0;max-width:14em}
+.etape .duree{font-size:1.3em;color:var(--gris);margin:.5em 0 0}
+
+/* 6. ACTION — la dernière, celle où le doigt s'arrête */
+.action{background:var(--accent);color:var(--carte)}
+.action .tete,.action .pied{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.35)}
+.action .jauge{background:rgba(255,255,255,.35)}
+.action .jauge i{background:var(--carte)}
+.action p{font-size:2.6em;line-height:1.2;font-weight:650;margin:0;max-width:13em}
+
+@page{size:1080px 1350px;margin:0}
+@media print{html,body{width:1080px}body{background:#fff;padding:0;gap:0}.d{width:1080px;height:1350px;max-width:none;aspect-ratio:auto;font-size:32px}}
+</style></head><body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+          GABARIT DE SECOURS — seulement si le moteur scripts/build_carrousel.py ne peut pas
+     tourner (pas de Python). Six à huit diapos. Une idée par diapo. La couverture fait glisser,
+     la dernière porte l'action. Exporter en PDF — la page est réglée ici à
+     1080 × 1350, sans marge : ne pas choisir A4 —, puis téléverser le PDF.
+     La jauge avance : régler width sur chaque diapo (1/7, 2/7, etc.).
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<!-- 1 — COUVERTURE : une phrase qui promet. Aucune explication. -->
+<section class="d couv">
+  <div class="tete"><span>1</span><span class="jauge"><i style="width:14%"></i></span><span>[N]</span></div>
+  <div class="corps">
+    <h1>[LA PHRASE QUI FAIT GLISSER]</h1>
+    <p class="sous">[UNE LIGNE QUI PRÉCISE, OU RIEN]</p>
+  </div>
+  <div class="pied"><span>[SON NOM]</span><span>[SA COMMUNE]</span></div>
+</section>
+
+<!-- 2 — IDÉE -->
+<section class="d idee">
+  <div class="tete"><span>2</span><span class="jauge"><i style="width:28%"></i></span><span>[N]</span></div>
+  <div class="corps">
+    <h2>[L'IDÉE, EN UNE PHRASE]</h2>
+    <p>[UNE OU DEUX PHRASES, PAS PLUS]</p>
+  </div>
+  <div class="pied"><span>[SON NOM]</span><span>[SA COMMUNE]</span></div>
+</section>
+
+<!-- 3 — ÉTAPE : pour une chronologie, une étape par diapo -->
+<section class="d etape">
+  <div class="tete"><span>3</span><span class="jauge"><i style="width:42%"></i></span><span>[N]</span></div>
+  <div class="corps">
+    <span class="rang">ÉTAPE [N]</span>
+    <h2>[CE QUI SE PASSE]</h2>
+    <p class="duree">[COMBIEN DE TEMPS ÇA PREND]</p>
+  </div>
+  <div class="pied"><span>[SON NOM]</span><span>[SA COMMUNE]</span></div>
+</section>
+
+<!-- 4 — DONNÉE, variante chiffre -->
+<section class="d donnee">
+  <div class="tete"><span>4</span><span class="jauge"><i style="width:56%"></i></span><span>[N]</span></div>
+  <div class="corps">
+    <p class="n">[LE CHIFFRE]</p>
+    <p class="quoi">[CE QU'IL SIGNIFIE]</p>
+  </div>
+  <div class="pied"><span>[SON NOM]</span><span>[SOURCE ET DATE]</span></div>
+</section>
+
+<!-- 5 — DONNÉE, variante deux colonnes -->
+<section class="d donnee">
+  <div class="tete"><span>5</span><span class="jauge"><i style="width:70%"></i></span><span>[N]</span></div>
+  <div class="corps">
+    <table>
+      <tr><th>[CE QU'ON CROIT]</th><th>[CE QUI EST VRAI]</th></tr>
+      <tr><td>[LIGNE]</td><td>[LIGNE]</td></tr>
+      <tr><td>[LIGNE]</td><td>[LIGNE]</td></tr>
+    </table>
+  </div>
+  <div class="pied"><span>[SON NOM]</span><span>[SOURCE ET DATE]</span></div>
+</section>
+
+<!-- 6 — PHOTO : une de ses photos, légende courte. Supprimer si aucune photo. -->
+<section class="d photo">
+  <img src="[CHEMIN DE LA PHOTO]" alt="">
+  <div class="tete"><span>6</span><span class="jauge"><i style="width:85%"></i></span><span>[N]</span></div>
+  <div class="legende">[LA LÉGENDE, UNE LIGNE]</div>
+</section>
+
+<!-- 7 — ACTION : une seule chose à faire -->
+<section class="d action">
+  <div class="tete"><span>[N]</span><span class="jauge"><i style="width:100%"></i></span><span>[N]</span></div>
+  <div class="corps">
+    <p>[LA SEULE CHOSE À FAIRE]</p>
+  </div>
+  <div class="pied"><span>[SON NOM] · [SA COMMUNE]</span><span>[SOURCE ET DATE, SI BESOIN]</span></div>
+</section>
+
+</body></html>

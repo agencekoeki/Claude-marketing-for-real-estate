@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ton annonce</title>
+<!-- Coque commune de la mallette : bandeau d'état, à faire, le principal, rangé. Même ordre partout. -->
+<style>
+:root{--encre:#14213D;--papier:#EDEFF2;--trait:#A8B2C0;--tampon:#7A2E3B;--pose:#3F6B4F;--carte:#FFF;--gris:#5A6678;--alerte:#8A5A1E}
+@media (prefers-color-scheme:dark){:root{--encre:#E8EBF0;--papier:#11161F;--trait:#3A4556;--tampon:#D98A98;--pose:#7FB394;--carte:#1A2230;--gris:#95A0B0;--alerte:#D9A85A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:"Inter","Segoe UI",Roboto,-apple-system,Arial,sans-serif;font-size:16px;line-height:1.55}
+.w{max-width:52rem;margin:0 auto;padding:1.6rem 1.5rem 2.5rem}
+/* zone 1 — bandeau d'état */
+.etat{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.etat h1{font-size:1.35rem;font-weight:600;margin:0;letter-spacing:-.015em}
+.etat .sous{font-size:.78rem;color:var(--gris);margin-top:.15rem}
+.puces{display:flex;gap:.4rem;flex-wrap:wrap}
+.puce{font-size:.76rem;border:1px solid var(--trait);padding:.15rem .6rem;color:var(--gris);white-space:nowrap}
+.puce.a{color:var(--alerte);border-color:var(--alerte)}
+.puce.ok{color:var(--pose);border-color:var(--pose)}
+/* zone 3 — à faire, toujours avant le corps long */
+.afaire{background:var(--carte);border:1px solid var(--trait);border-left:3px solid var(--alerte);padding:.8rem 1rem;margin-bottom:1.1rem}
+.afaire b.t{display:block;font-size:.72rem;color:var(--gris);font-weight:600;margin-bottom:.4rem}
+.afaire p{margin:0 0 .3rem;font-size:.9rem}
+.afaire p:last-child{margin:0}
+.afaire p span{color:var(--gris)}
+.afaire.vide{border-left-color:var(--pose)}
+/* zone 2 — le principal */
+h2{font-size:.72rem;font-weight:600;color:var(--gris);margin:1.1rem 0 .55rem}
+.carte{background:var(--carte);border:1px solid var(--trait);padding:.95rem 1.1rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;align-items:start}
+.duo.l{grid-template-columns:1.45fr 1fr}
+.duo.r{grid-template-columns:1fr 1.45fr}
+@media(max-width:700px){.duo,.duo.l,.duo.r{grid-template-columns:1fr}}
+.g{color:var(--gris)}.p{color:var(--pose)}.a{color:var(--alerte)}.t{color:var(--tampon)}
+.mono{font-variant-numeric:tabular-nums;font-size:.78rem;color:var(--gris)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;font-size:.7rem;color:var(--gris);font-weight:600;padding:0 .6rem .4rem 0;border-bottom:2px solid var(--encre)}
+td{padding:.5rem .6rem .5rem 0;border-bottom:1px solid var(--trait);vertical-align:top}
+.jauge{display:block;height:3px;background:var(--trait)}.jauge i{display:block;height:3px;background:var(--pose)}
+/* zone 4 — rangé */
+.range{border-top:1px solid var(--trait);margin-top:1.3rem;padding-top:.7rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.76rem;color:var(--gris)}
+@media print{body{background:#fff}.w{max-width:none;padding:0}}
+</style></head><body>
+<div class="w">
+
+  <div class="etat">
+    <div><h1>Ton annonce, telle qu'on la verra</h1><div class="sous">[BIEN] · pour [FICHE ACQUÉREUR] · [PORTAIL]</div></div>
+    <div class="puces"><span class="puce ">immo-annonce · 4 / 4</span><span class="puce a">[N] à compléter avant de publier <!-- lignes vides du bloc réglementaire + champs de portail manquants --></span></div>
+  </div>
+
+  <div class="afaire"><b class="t">À FAIRE, DANS L'ORDRE</b><p><b>[LA MENTION À COMPLÉTER — nommée, vide]</b> <span>· bloque la mise en ligne, je ne l'écris pas à ta place</span></p><p><b>[LE CHAMP DU PORTAIL À REMPLIR, OU LE FAIT MANQUANT]</b> <span>· sinon tu sors des filtres</span></p></div>
+
+  <div class="duo r">
+    <div>
+      <h2 style="margin-top:0">DANS LA LISTE DE RÉSULTATS</h2>
+      <div class="carte" style="padding:0;overflow:hidden">
+        <div style="aspect-ratio:4/3;background:var(--trait);display:flex;align-items:center;justify-content:center;color:var(--gris);font-size:.82rem">[LA PREMIÈRE PHOTO — le fait du titre]</div>
+        <div style="padding:.8rem .95rem">
+          <div style="font-size:1.15rem;font-weight:650">[PRIX]</div>
+          <div style="font-size:.9rem;font-weight:550;line-height:1.3;margin:.2rem 0">[LE TITRE]</div>
+          <div class="g" style="font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">[LA PREMIÈRE LIGNE]</div>
+          <div class="mono" style="border-top:1px solid var(--trait);margin-top:.6rem;padding-top:.4rem">titre [N] / 70 <!-- caractères comptés, espaces comprises --> · première ligne [N] / 100</div>
+        </div>
+      </div>
+      <p class="g" style="font-size:.78rem;margin:.6rem 0 0">C'est tout ce que voit celui qui compare vingt biens.</p>
+
+      <h2>AUTOUR — position non publiée</h2>
+      <div class="duo" style="grid-template-columns:1fr;gap:.5rem">
+        <div class="carte" style="padding:.6rem .8rem"><b class="g" style="font-size:.74rem">[REPÈRE 1]</b><div style="font-size:1.2rem;font-weight:600;line-height:1.1">[N] <span class="mono">[à pied / en voiture / m]</span></div><span class="mono p">[itinéraire · mesuré | confirmé par toi]</span></div>
+        <div class="carte" style="padding:.6rem .8rem"><b class="g" style="font-size:.74rem">[REPÈRE 2]</b><div style="font-size:1.2rem;font-weight:600;line-height:1.1">[N] <span class="mono">[MODE]</span></div><span class="mono p">[SOURCE]</span></div>
+        <div class="carte" style="padding:.6rem .8rem"><b class="g" style="font-size:.74rem">[REPÈRE 3]</b><div style="font-size:1.2rem;font-weight:600;line-height:1.1">[N] <span class="mono">[MODE]</span></div><span class="mono">[SOURCE]</span></div>
+      </div>
+      <div class="carte" style="border-left:3px solid var(--tampon);margin-top:.5rem;font-size:.84rem;padding:.6rem .8rem"><span class="g">Depuis le séjour :</span> [CE QU'ON ENTEND — ou retirer]</div>
+    </div>
+
+    <div>
+      <h2 style="margin-top:0">L'ANNONCE ENTIÈRE — version [CANAL : son logiciel | son site | Leboncoin…]</h2>
+      <!-- Une version affichée à la fois. Si plusieurs canaux, des puces pour changer :
+           chaque puce = une version, mêmes faits, longueurs et première ligne du canal. -->
+      <div class="puces" style="margin-bottom:.6rem"><span class="puce ok">[CANAL 1]</span><span class="puce">[CANAL 2]</span><span class="puce">[SON SITE]</span></div>
+      <div class="carte" style="font-size:.92rem">
+        <p style="margin:0 0 .5rem"><b>[LE TITRE]</b></p>
+        <p style="margin:0 0 .6rem">[LA PREMIÈRE LIGNE]</p>
+        <p class="g" style="margin:0 0 .6rem">[LA VIE DEDANS]</p>
+        <p class="g" style="margin:0 0 .6rem">[CE QUI SE FILTRE MAL]</p>
+        <p class="g" style="margin:0 0 .6rem">[L'ENVIRONNEMENT, EN DISTANCES]</p>
+        <div style="border-top:1px solid var(--trait);margin-top:.6rem;padding-top:.6rem" class="g">[CE QUI COÛTE]</div>
+        <div style="border-top:1px solid var(--trait);margin-top:.6rem;padding-top:.6rem;font-size:.85rem">
+          <div class="g">[MENTION FOURNIE PAR CADRE.MD]</div>
+          <div class="a" style="font-weight:550;margin-top:.2rem">[MENTION À COMPLÉTER : nommée, vide]</div>
+        </div>
+      </div>
+
+      <h2>LES PHOTOS, DANS L'ORDRE</h2>
+      <div class="carte" style="border-left:3px solid var(--pose);font-size:.86rem">
+        <ol style="margin:0;padding-left:1.1rem;line-height:1.5"><li><b>[LA PREMIÈRE]</b> — le fait du titre</li><li>[SUIVANTE]</li><li>[SUIVANTE]</li></ol>
+        <div class="g" style="border-top:1px solid var(--trait);margin-top:.5rem;padding-top:.4rem;font-size:.8rem">Ne pas montrer : [CE QU'IL NE FAUT PAS MONTRER]</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="range"><span>01_BIENS/[BIEN]/annonce.md</span><span>[N] comparables titrent sur [X] ; le nôtre [CE QUI LE DISTINGUE]</span></div>
+
+</div></body></html>

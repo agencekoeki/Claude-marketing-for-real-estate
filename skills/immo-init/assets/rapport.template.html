@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relevé d'installation</title>
+<style>
+  :root{
+    --encre:#14213D;        /* texte et structure */
+    --papier:#EDEFF2;       /* fond, papier de plan */
+    --trait:#A8B2C0;        /* filets */
+    --tampon:#7A2E3B;       /* la seule couleur de signal */
+    --pose:#3F6B4F;         /* ce qui est en place */
+    --blanc:#FFFFFF;
+    --marge:9.5rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--papier); color:var(--encre);
+    font-family:"Inter","Segoe UI",Roboto,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.55;
+  }
+  .feuille{max-width:62rem;margin:0 auto;padding:3.5rem 2rem 5rem;position:relative}
+
+  /* marge de gauche, comme la colonne d'un plan cadastral : elle porte l'état, pas de la décoration */
+  .marge{
+    position:absolute;left:2rem;top:3.5rem;width:7rem;
+    border-right:1px solid var(--trait);padding-right:1.25rem;height:calc(100% - 8.5rem);
+    font-size:.72rem;line-height:1.5;color:#5A6678;letter-spacing:.01em;
+  }
+  .marge b{display:block;color:var(--encre);font-weight:600}
+  .marge div + div{margin-top:1rem}
+  .corps{margin-left:var(--marge)}
+
+  h1{font-size:.8rem;font-weight:600;letter-spacing:.06em;margin:0 0 1.75rem;color:#5A6678}
+  h2{font-size:1.05rem;font-weight:650;margin:3.25rem 0 .9rem;letter-spacing:-.005em}
+  p{margin:0 0 .9rem;max-width:36em}
+
+  /* le constat : l'unique endroit où on dépense de l'audace */
+  .constat{
+    font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.2;font-weight:600;
+    letter-spacing:-.022em;margin:0 0 1rem;max-width:20em;color:var(--tampon);
+  }
+  .appui{font-size:.82rem;color:#5A6678;border-top:1px solid var(--trait);padding-top:.7rem;max-width:34em}
+
+  .citation{
+    border-left:2px solid var(--trait);padding:.15rem 0 .15rem 1.1rem;
+    margin:0 0 1.1rem;max-width:34em;
+  }
+  .citation p{margin:0 0 .35rem}
+
+  /* état des fichiers : le filet se remplit, il ne décore pas */
+  .fichiers{width:100%;border-collapse:collapse;max-width:40rem;font-size:.95rem}
+  .fichiers td{padding:.55rem 0;border-bottom:1px solid var(--trait);vertical-align:middle}
+  .fichiers td:first-child{width:11rem;font-weight:550}
+  .fichiers td:last-child{width:6rem;text-align:right;font-variant-numeric:tabular-nums;color:#5A6678;font-size:.85rem}
+  .jauge{display:block;height:3px;background:var(--trait)}
+  .jauge i{display:block;height:3px;background:var(--pose)}
+
+  .tache{
+    background:var(--blanc);border:1px solid var(--trait);border-left:3px solid var(--pose);
+    padding:1.25rem 1.4rem;max-width:40rem;
+  }
+  .tache dl{margin:0;display:grid;grid-template-columns:8.5rem 1fr;gap:.4rem 1rem;font-size:.92rem}
+  .tache dt{color:#5A6678}
+  .tache dd{margin:0}
+
+  .manques{list-style:none;padding:0;margin:0;max-width:40rem}
+  .manques li{border-bottom:1px solid var(--trait);padding:.85rem 0}
+  .manques b{font-weight:600}
+  .manques span{display:block;font-size:.88rem;color:#5A6678}
+
+  .ensuite{
+    margin-top:3.25rem;border-top:2px solid var(--encre);padding-top:1.1rem;
+    font-size:1.15rem;font-weight:550;max-width:34em;
+  }
+  .pied{margin-top:3rem;font-size:.78rem;color:#5A6678;max-width:38em}
+
+  @media (max-width:760px){
+    .marge{position:static;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--trait);
+           padding:0 0 1rem;margin-bottom:2rem;display:flex;gap:2rem;flex-wrap:wrap}
+    .marge div + div{margin-top:0}
+    .corps{margin-left:0}
+    .feuille{padding:2rem 1.25rem 3rem}
+  }
+  @media print{
+    body{background:#fff;font-size:11.5pt}
+    .feuille{max-width:none;padding:0}
+    .tache{background:#fff}
+    h2{margin-top:1.6rem}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .constat{animation:leve .5s ease-out both}
+    @keyframes leve{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  }
+
+  .double{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:44rem}
+  .ecart{border:1px solid var(--trait);padding:1rem 1.2rem;background:var(--blanc)}
+  .ecart b{display:block;font-size:.72rem;color:#5A6678;font-weight:600;margin-bottom:.35rem}
+
+  .arbitrages{width:100%;border-collapse:collapse;max-width:40rem;font-size:.93rem}
+  .arbitrages th{text-align:left;font-size:.72rem;color:#5A6678;font-weight:600;padding-bottom:.4rem;border-bottom:1px solid var(--trait)}
+  .arbitrages td{padding:.5rem 0;border-bottom:1px solid var(--trait)}
+  .arbitrages td:first-child{width:9rem;color:#5A6678}
+  .arbitrages td:nth-child(2){font-weight:550}
+  .arbitrages td:last-child{color:#8A94A3;text-decoration:line-through}
+
+  .bannis{display:flex;flex-wrap:wrap;gap:.4rem;max-width:42rem;margin:.4rem 0 0}
+  .bannis span{border:1px solid var(--tampon);color:var(--tampon);padding:.2rem .6rem;font-size:.85rem}
+  .bannis span i{font-style:normal;opacity:.6;font-size:.75rem}
+
+  .fiche{border:1px solid var(--trait);background:var(--blanc);padding:1.1rem 1.3rem;margin-bottom:1rem;max-width:44rem}
+  .fiche h3{margin:0 0 .15rem;font-size:1.02rem;font-weight:650}
+  .fiche .fam{font-size:.75rem;color:#5A6678;margin:0 0 .8rem}
+  .fiche dl{margin:0;display:grid;grid-template-columns:9.5rem 1fr;gap:.35rem 1rem;font-size:.9rem}
+  .fiche dt{color:#5A6678}
+  .fiche dd{margin:0}
+  .soncas{display:inline-block;border-bottom:2px solid var(--tampon);padding-bottom:1px}
+
+  .canaux{width:100%;border-collapse:collapse;max-width:40rem;font-size:.92rem}
+  .canaux td{padding:.45rem 0;border-bottom:1px solid var(--trait)}
+  .canaux td:first-child{width:18rem}
+  .canaux td:last-child{width:8rem;text-align:right;font-size:.8rem;color:#5A6678}
+  .cran{display:inline-block;width:2.6rem;height:3px;background:var(--trait);vertical-align:middle}
+  .cran.f{background:var(--pose)}
+
+  .carnet{list-style:none;padding:0;margin:0;max-width:42rem}
+  .carnet li{border-left:2px solid var(--trait);padding:.15rem 0 .15rem 1rem;margin-bottom:.9rem}
+  .carnet b{font-weight:600}
+  .carnet span{display:block;font-size:.87rem;color:#5A6678}
+
+  .acte{margin:4rem 0 .4rem;font-size:.72rem;font-weight:600;color:#5A6678;border-top:2px solid var(--encre);padding-top:.6rem}
+  .acte:first-of-type{margin-top:3rem}
+</style>
+</head>
+<body>
+<div class="feuille">
+
+  <aside class="marge">
+    <div><b>[NOM]</b>[STRUCTURE]</div>
+    <div><b>Installé le</b>[DATE]</div>
+    <div><b>Mallette</b>immo [VERSION]</div>
+    <div><b>Dossier</b>[CHEMIN]</div>
+    <div><b>Sources</b>[SOURCES CONSULTÉES]</div>
+  </aside>
+
+  <main class="corps">
+    <h1>Relevé d'installation</h1>
+
+    <!-- ACTE 1 — deux constats, jamais inventés, toujours tirés du [vu] -->
+    <p class="acte">Ce que j'ai vu</p>
+
+    <p class="constat">[LE CONSTAT]</p>
+    <p class="appui">[SUR QUOI IL REPOSE : combien d'éléments, quelle source, quelle période]</p>
+
+    <div class="double" style="margin-top:2rem">
+      <div class="ecart"><b>Ce que tu dis faire</b>[PÉRIMÈTRE DÉCLARÉ]</div>
+      <div class="ecart"><b>Ce que montrent tes annonces</b>[PÉRIMÈTRE OBSERVÉ]</div>
+    </div>
+
+    <!-- ACTE 2 — lui -->
+    <p class="acte">Toi</p>
+
+    <h2>Ton USP — ce pour quoi un vendeur te choisit</h2>
+    <!-- Si en [à confirmer] : une seule ligne, « à construire au premier carnet », rien d'autre. -->
+    <p class="constat" style="font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--encre)">[LA PHRASE]</p>
+    <div class="citation">
+      <p>[COMPORTEMENT 1]</p><p>[COMPORTEMENT 2]</p><p>[COMPORTEMENT 3]</p>
+    </div>
+    <p class="appui" style="border:0;padding:0">Prouvé par [LES DEUX DOSSIERS, SANS NOM]. Ce que ça exclut : [CE QUE ÇA EXCLUT].</p>
+
+    <h2>Ce que j'ai retenu</h2>
+    <div class="citation">
+      <p>[LIGNE 1]</p><p>[LIGNE 2]</p><p>[LIGNE 3]</p><p>[LIGNE 4]</p><p>[LIGNE 5]</p>
+    </div>
+
+    <h2>Ta façon d'écrire, telle que tu l'as choisie</h2>
+    <table class="arbitrages">
+      <tr><th>Sur quoi</th><th>Ce que tu as gardé</th><th>Ce que tu as écarté</th></tr>
+      <tr><td>Longueur</td><td>[RETENU]</td><td>[ÉCARTÉ]</td></tr>
+      <tr><td>Tu ou vous</td><td>[RETENU]</td><td>[ÉCARTÉ]</td></tr>
+      <tr><td>Ouverture</td><td>[RETENU]</td><td>[ÉCARTÉ]</td></tr>
+      <tr><td>Ponctuation</td><td>[RETENU]</td><td>[ÉCARTÉ]</td></tr>
+      <tr><td>Emoji</td><td>[RETENU]</td><td>[ÉCARTÉ]</td></tr>
+      <tr><td>Fin de texte</td><td>[RETENU]</td><td>[ÉCARTÉ]</td></tr>
+    </table>
+    <p class="appui" style="margin-top:.9rem;border:0;padding:0">[LA SYNTHÈSE EN UNE PHRASE]</p>
+
+    <h2>Ce que tu ne veux plus lire sous ton nom</h2>
+    <div class="bannis">
+      <span>[FORMULE] <i>[vu chez N confrères]</i></span>
+      <span>[FORMULE] <i>[vu chez N confrères]</i></span>
+      <span>[FORMULE] <i>[vu chez N confrères]</i></span>
+      <span>[INTERDIT QU'IL A DONNÉ]</span>
+    </div>
+
+    <!-- ACTE 3 — ses clients -->
+    <p class="acte">À qui tu parles</p>
+
+    <div class="fiche">
+      <h3>[NOM DE CODE]</h3>
+      <p class="fam">[CÔTÉ VENDEUR OU ACQUÉREUR] · construite sur [N] dossiers réels</p>
+      <dl>
+        <dt>Ce qui le met en route</dt><dd>[DÉCLENCHEUR]</dd>
+        <dt>Ce qui le motive</dt><dd><span class="soncas">[AXE 1]</span> et <span class="soncas">[AXE 2]</span></dd>
+        <dt>Ce qui le bloque</dt><dd>[FREIN, ET COMBIEN DE TEMPS]</dd>
+        <dt>Ce qui le décide</dt><dd>[LE LEVIER, AVEC LE FAIT QUI L'ILLUSTRE]</dd>
+        <dt>Qui tranche</dt><dd>[QUI DÉCIDE] · [QUI BLOQUE, SI IDENTIFIÉ]</dd>
+      </dl>
+    </div>
+    <!-- une fiche par client type, trois au maximum dans le relevé -->
+
+    <h2>Par où ils arrivent, et ce qui les convainc</h2>
+    <table class="canaux">
+      <tr><td>[CANAL]</td><td><span class="cran f"></span><span class="cran f"></span><span class="cran"></span></td><td>[ORIGINE]</td></tr>
+      <tr><td>[CANAL]</td><td><span class="cran f"></span><span class="cran"></span><span class="cran"></span></td><td>[ORIGINE]</td></tr>
+      <tr><td>[CE QUI CONVAINC]</td><td><span class="cran f"></span><span class="cran f"></span><span class="cran f"></span></td><td>[ORIGINE]</td></tr>
+    </table>
+
+    <!-- ACTE 4 — ce qui est en place, ce qui vient -->
+    <p class="acte">Ce qui est en place, et ce qui vient</p>
+
+    <h2>Tes cinq fichiers</h2>
+    <table class="fichiers">
+      <tr><td>profil</td><td><span class="jauge"><i style="width:[N]%"></i></span></td><td>[N] %</td></tr>
+      <tr><td>voix</td><td><span class="jauge"><i style="width:[N]%"></i></span></td><td>[N] %</td></tr>
+      <tr><td>cadre</td><td><span class="jauge"><i style="width:[N]%"></i></span></td><td>[N] %</td></tr>
+      <tr><td>clients types</td><td><span class="jauge"><i style="width:[N]%"></i></span></td><td>[N] %</td></tr>
+      <tr><td>récurrences</td><td><span class="jauge"><i style="width:[N]%"></i></span></td><td>[N] %</td></tr>
+    </table>
+    <p class="appui" style="margin-top:1rem;border:0;padding:0">
+      Dans <code>[CHEMIN]/00_MOI/</code>. Ils t'appartiennent, tu peux les ouvrir et les
+      corriger à la main. Tout ce que je ferai pour toi part de là.
+    </p>
+
+    <h2>Ce qui tourne sans toi</h2>
+    <div class="tache">
+      <dl>
+        <dt>Tâche</dt><dd>[NOM]</dd>
+        <dt>Quand</dt><dd>[CADENCE, HEURE]</dd>
+        <dt>Prochaine fois</dt><dd>[DATE]</dd>
+        <dt>Ce que tu recevras</dt><dd>[SORTIE]</dd>
+        <dt>Ce qu'elle ne fera pas</dt><dd>Rien n'est envoyé, publié ni supprimé sans toi.</dd>
+      </dl>
+    </div>
+    <p class="appui" style="margin-top:1rem;border:0;padding:0">
+      Rendez-vous le [DATE + 3 SEMAINES] : si tu ne l'as pas lue, on la supprime.
+    </p>
+
+    <h2>Ce qu'on pourrait installer ensuite</h2>
+    <ul class="carnet">
+      <li><b>[CE QUI REVIENT CHEZ LUI]</b><span>[CE QUE ÇA DEVIENDRAIT : tâche planifiée, outil dédié] — [CE QU'IL FAUDRAIT POUR QUE ÇA TOURNE]</span></li>
+      <li><b>[CE QUI REVIENT CHEZ LUI]</b><span>[CE QUE ÇA DEVIENDRAIT] — [CE QU'IL FAUDRAIT]</span></li>
+      <li><b>[CE QUI REVIENT CHEZ LUI]</b><span>[CE QUE ÇA DEVIENDRAIT] — [CE QU'IL FAUDRAIT]</span></li>
+    </ul>
+
+    <h2>Ce qui te manque, et ce que ça t'ouvrirait</h2>
+    <ul class="manques">
+      <li><b>[MANQUE 1]</b><span>[CE QUE ÇA DÉBLOQUE, EN UNE LIGNE]</span></li>
+      <li><b>[MANQUE 2]</b><span>[CE QUE ÇA DÉBLOQUE]</span></li>
+      <li><b>[MANQUE 3]</b><span>[CE QUE ÇA DÉBLOQUE]</span></li>
+    </ul>
+
+    <h2>Où tout se trouve</h2>
+  <table class="fichiers" style="max-width:44rem">
+    <tr><td style="width:14rem">Pour savoir où tu en es</td><td colspan="2" style="text-align:left"><code>[CHEMIN]/tableau-de-bord.html</code> — un seul fichier, à ouvrir quand tu veux</td></tr>
+    <tr><td>Ton dossier</td><td colspan="2" style="text-align:left"><code>[CHEMIN]</code></td></tr>
+    <tr><td>Ton projet</td><td colspan="2" style="text-align:left">[NOM DU PROJET] — dans le panneau de gauche</td></tr>
+    <tr><td>Tes cinq fichiers</td><td colspan="2" style="text-align:left"><code>[CHEMIN]/00_MOI/</code> — ouvrables et modifiables à la main</td></tr>
+    <tr><td>Depuis ton téléphone</td><td colspan="2" style="text-align:left">[les fichiers du projet | non disponible, voir plus bas]</td></tr>
+    <tr><td>Pour recommencer</td><td colspan="2" style="text-align:left">ouvre ton projet et tape <code>[LA COMMANDE]</code></td></tr>
+  </table>
+
+  <p class="ensuite">[LA SEULE CHOSE À FAIRE ENSUITE]</p>
+
+    <p class="pied">
+      Relevé daté du [DATE]. Il décrit ce qui a été constaté ce jour-là. Aucun nom de client,
+      aucune adresse et aucun montant n'y figure, ni dans les fichiers qu'il résume.
+    </p>
+  </main>
+
+</div>
+</body>
+</html>

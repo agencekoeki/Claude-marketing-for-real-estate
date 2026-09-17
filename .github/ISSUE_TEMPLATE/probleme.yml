@@ -1,0 +1,46 @@
+name: Signaler un problème
+description: Un outil de la mallette ne fait pas ce qu'il annonce
+title: "[problème] "
+body:
+  - type: markdown
+    attributes:
+      value: "N'écrivez ici aucune donnée de client : ni nom, ni adresse, ni téléphone."
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Où travaillez-vous ?
+      options:
+        - Claude Desktop, avec un dossier de l'ordinateur
+        - claude.ai dans le navigateur
+        - Application mobile
+        - Claude Code
+    validations:
+      required: true
+  - type: dropdown
+    id: outil
+    attributes:
+      label: Quel outil ?
+      options:
+        - immo-init
+        - immo-parcours
+        - immo-annonce
+        - immo-reseaux-sociaux
+        - immo-penser-savoir
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version de l'outil
+      description: La ligne « Version » en haut de son SKILL.md
+  - type: textarea
+    id: passe
+    attributes:
+      label: Ce qui s'est passé
+      description: Ce que vous avez demandé, et ce que Claude a répondu
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Ce que vous attendiez

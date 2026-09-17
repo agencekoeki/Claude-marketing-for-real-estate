@@ -1,0 +1,80 @@
+{
+ "_mode_emploi": "Contrat du moteur build_carrousel.py. Copie ce fichier en contenu.json, garde les diapos du modèle retenu, remplace chaque crochet : le moteur refuse un crochet oublié. Trois variantes au plus dans le corps. « sorties » : pdf pour LinkedIn, png pour Instagram et Facebook. « canevas » : portrait pour un carrousel ; carre possible pour un visuel unique. « identite » est facultatif : sans lui, le moteur lit 00_MOI/cadre.md.",
+ "titre_document": "[LE TITRE DU DOCUMENT, CELUI QUE LINKEDIN DEMANDE]",
+ "canevas": "portrait",
+ "sorties": [
+  "pdf",
+  "png"
+ ],
+ "diapos": [
+  {
+   "type": "couverture",
+   "titre": "[LA PHRASE QUI FAIT GLISSER]",
+   "sous_titre": "[UNE LIGNE QUI PRÉCISE — champ facultatif]"
+  },
+  {
+   "type": "idee",
+   "titre": "[L'IDÉE, EN UNE PHRASE]",
+   "texte": "[UNE OU DEUX PHRASES — facultatif]"
+  },
+  {
+   "type": "etape",
+   "numero": 1,
+   "titre": "[CE QUI SE PASSE]",
+   "duree": "[COMBIEN DE TEMPS — facultatif]",
+   "texte": "[UNE PHRASE — facultatif]",
+   "source": "[D'OÙ VIENT LA DURÉE — obligatoire si une durée est donnée]"
+  },
+  {
+   "type": "chiffre",
+   "valeur": "[LE CHIFFRE]",
+   "legende": "[CE QU'IL SIGNIFIE]",
+   "source": "[SOURCE ET DATE]"
+  },
+  {
+   "type": "colonnes",
+   "gauche_titre": "[CE QU'ON CROIT]",
+   "droite_titre": "[CE QUI EST VRAI]",
+   "lignes": [
+    [
+     "[LIGNE]",
+     "[LIGNE]"
+    ],
+    [
+     "[LIGNE]",
+     "[LIGNE]"
+    ]
+   ]
+  },
+  {
+   "type": "liste",
+   "titre": "[CE QU'ON VÉRIFIE]",
+   "elements": [
+    "[DE DEUX]",
+    "[À SEPT LIGNES]"
+   ]
+  },
+  {
+   "type": "citation",
+   "texte": "[LA PHRASE D'UN CLIENT, ANONYMISÉE]",
+   "auteur": "[QUI, SANS NOM — une vendeuse, 2026]"
+  },
+  {
+   "type": "photo",
+   "fichier": "03_RESSOURCES/[SA-PHOTO].jpg",
+   "legende": "[LA LÉGENDE, UNE LIGNE]",
+   "droits_confirmes": false
+  },
+  {
+   "type": "avant_apres",
+   "avant": "03_RESSOURCES/[AVANT].jpg",
+   "apres": "03_RESSOURCES/[APRES].jpg",
+   "legende": "[CE QUI A CHANGÉ]",
+   "droits_confirmes": false
+  },
+  {
+   "type": "action",
+   "texte": "[LA SEULE CHOSE À FAIRE, SANS LIEN]"
+  }
+ ]
+}
