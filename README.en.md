@@ -7,7 +7,7 @@
 
 ## Install
 
-- **Claude Desktop** — Customize › **Plugins** tab (not Connectors) › **Add** › **Add marketplace** › **Add from a repository**, paste `https://github.com/agencekoeki/Claude-marketing-for-real-estate`, then install the **mallette-immo** plugin.
+- **Claude Desktop or claude.ai** — Customize › **Plugins** tab (not Connectors) › **Add** › **Add marketplace** › **Add from a repository**, paste `https://github.com/agencekoeki/Claude-marketing-for-real-estate`, then click **Add** next to **Mallette immo**: it should list 5 skills.
 - **claude.ai** — download the five files — `.zip` or `.skill`, same content — from the [latest release](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest) and upload them one by one under Customize › Skills.
 - **Claude Code** — `/plugin marketplace add agencekoeki/Claude-marketing-for-real-estate`, then `/plugin install mallette-immo@sebastien-grillot`. The scripts need Python 3; carousels also need reportlab, Pillow and pypdf.
 

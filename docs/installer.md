@@ -6,11 +6,11 @@
 - **L'exécution de code activée** dans les réglages de Claude. Sans elle, les compétences apparaissent grisées ; dans une organisation, c'est le propriétaire du compte qui l'active.
 - Pour travailler avec votre dossier : **Claude Desktop**, sur un projet relié à un dossier de votre ordinateur.
 
-## 1. Claude Desktop, par la marketplace — recommandé
+## 1. Claude Desktop ou claude.ai, par la place de marché — recommandé
 
 1. Ouvrez **Personnaliser**, puis l'onglet **Plugins**. Pas l'onglet des connecteurs : son bouton d'ajout demande l'adresse d'un serveur MCP, ce n'est pas le bon endroit.
 2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`
-3. Installez le plugin **mallette-immo** : les cinq outils arrivent ensemble.
+3. Sur la ligne **Mallette immo**, cliquez sur **Ajouter** : les cinq outils arrivent ensemble, et le plugin doit annoncer 5 compétences.
 
 Les intitulés changent d'une version de l'application à l'autre. Si vous ne trouvez pas le menu, passez par les fichiers ci-dessous : le résultat est le même, seules les mises à jour se font à la main.
 

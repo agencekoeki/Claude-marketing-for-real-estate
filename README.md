@@ -28,11 +28,11 @@
 
 **Il vous faut** un abonnement Claude payant — Pro, Max ou Team — et l'exécution de code activée dans les réglages de Claude.
 
-### Claude Desktop — recommandé
+### Claude Desktop ou claude.ai, par la place de marché — recommandé
 
-1. Dans Claude Desktop, ouvrez **Personnaliser**, puis l'onglet **Plugins** — pas celui des connecteurs.
+1. Dans Claude Desktop ou sur claude.ai, ouvrez **Personnaliser**, puis l'onglet **Plugins** — pas celui des connecteurs.
 2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`
-3. Installez le plugin **mallette-immo**.
+3. Sur la ligne **Mallette immo**, cliquez sur **Ajouter** : le plugin doit annoncer 5 compétences.
 
 Pour les mises à jour, resynchronisez cette place de marché depuis le même onglet. Les intitulés des menus peuvent varier selon la version de l'application : le [guide d'installation](docs/installer.md) détaille chaque cas.
 
