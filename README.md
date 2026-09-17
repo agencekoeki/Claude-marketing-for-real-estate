@@ -30,11 +30,11 @@
 
 ### Claude Desktop — recommandé
 
-1. Dans Claude Desktop, ouvrez **Personnaliser**.
-2. Ajoutez une marketplace depuis GitHub, avec cette adresse : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`
+1. Dans Claude Desktop, ouvrez **Personnaliser**, puis l'onglet **Plugins** — pas celui des connecteurs.
+2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`
 3. Installez le plugin **mallette-immo**.
 
-Les mises à jour arrivent par la même marketplace. Les intitulés des menus peuvent varier selon la version de l'application : le [guide d'installation](docs/installer.md) détaille chaque cas.
+Pour les mises à jour, resynchronisez cette place de marché depuis le même onglet. Les intitulés des menus peuvent varier selon la version de l'application : le [guide d'installation](docs/installer.md) détaille chaque cas.
 
 ### Par fichiers, dans claude.ai
 

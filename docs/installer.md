@@ -8,8 +8,8 @@
 
 ## 1. Claude Desktop, par la marketplace — recommandé
 
-1. Ouvrez **Personnaliser**.
-2. Cherchez l'endroit où l'on ajoute une marketplace depuis GitHub, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`
+1. Ouvrez **Personnaliser**, puis l'onglet **Plugins**. Pas l'onglet des connecteurs : son bouton d'ajout demande l'adresse d'un serveur MCP, ce n'est pas le bon endroit.
+2. Cliquez sur **Ajouter** (ou **+**), puis **Ajouter une place de marché** › **Ajouter à partir d'un référentiel**, et collez : `https://github.com/agencekoeki/Claude-marketing-for-real-estate`
 3. Installez le plugin **mallette-immo** : les cinq outils arrivent ensemble.
 
 Les intitulés changent d'une version de l'application à l'autre. Si vous ne trouvez pas le menu, passez par les fichiers ci-dessous : le résultat est le même, seules les mises à jour se font à la main.
