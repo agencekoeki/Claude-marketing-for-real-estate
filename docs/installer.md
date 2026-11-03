@@ -2,7 +2,7 @@
 
 ## Avant tout
 
-- **Un abonnement Claude payant** : Pro, Max ou Team.
+- **Un compte Claude.** Par la place de marché (le plugin) : un abonnement payant — Pro, Max, Team ou Enterprise. Par fichiers `.zip` ou `.skill` : le compte gratuit suffit aussi, avec ses limites d'usage.
 - **L'exécution de code activée** dans les réglages de Claude. Sans elle, les compétences apparaissent grisées ; dans une organisation, c'est le propriétaire du compte qui l'active.
 - Pour travailler avec votre dossier : **Claude Desktop**, sur un projet relié à un dossier de votre ordinateur.
 

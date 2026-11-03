@@ -1,6 +1,6 @@
 ---
 name: immo-reseaux-sociaux
-description: Décide quoi publier et écrit les publications d'un agent immobilier — réseaux sociaux, page d'agence, communication locale. Deux usages dans un seul outil. Utiliser quand il demande quoi raconter cette semaine, quoi poster ce mois-ci, qu'il dit ne pas savoir quoi dire ou ne rien avoir à publier, qu'il veut préparer son planning ou ses sujets, ou qu'il demande son post du jour, ce qu'il publie aujourd'hui. Et utiliser aussi quand il demande d'écrire un post, une publication, une story, un texte pour Facebook, Instagram ou LinkedIn, d'annoncer un bien rentré, une vente signée, une porte ouverte, ou d'alimenter sa page. Produit des brouillons qu'il relit et publie lui-même, avec le plan de prise de vue qui va avec, jamais une publication envoyée.
+description: Décide quoi publier et écrit les publications d'un agent immobilier — réseaux sociaux, page d'agence, communication locale. Deux usages dans un seul outil. Utiliser quand il demande quoi raconter cette semaine, quoi poster ce mois-ci, qu'il dit ne pas savoir quoi dire ou ne rien avoir à publier, qu'il veut préparer son planning ou ses sujets, ou qu'il demande son post du jour, ce qu'il publie aujourd'hui, ou toute la campagne d'un bien — photo retouchée, clip, affiche et légende du Reel. Et utiliser aussi quand il demande d'écrire un post, une publication, une story, un texte pour Facebook, Instagram ou LinkedIn, d'annoncer un bien rentré, une vente signée, une porte ouverte, ou d'alimenter sa page. Produit des brouillons qu'il relit et publie lui-même, avec le plan de prise de vue qui va avec, jamais une publication envoyée.
 license: "GPL-3.0 — texte complet dans le fichier LICENSE du dépôt de la mallette"
 ---
 
@@ -24,7 +24,7 @@ mandats. Un carnet sans écriture reste une liste. C'est pour ça qu'ils tiennen
 Et les deux partent du même endroit : **la mission**, pas le sujet et pas le bien.
 `metier.md` en porte huit, dont quatre se servent sans qu'il se passe quoi que ce soit.
 
-**Version 10.3 — septembre 2026.**
+**Version 10.4 — novembre 2026.**
 
 **Mises à jour et installation.** La mallette est publiée sur
 https://github.com/agencekoeki/Claude-marketing-for-real-estate, et la dernière version de chaque outil est dans
@@ -238,7 +238,10 @@ ses couleurs, exporte et contrôle : une image PNG, ou un PDF pour LinkedIn et d
 Instagram et Facebook. Lis `references/visuels.md`. C'est ce qui sauve les angles sans photo,
 c'est-à-dire l'objection, la preuve et l'utile — précisément ceux qui rentrent des mandats.
 
-**Sur une vidéo, tu ne produis qu'un script**, et tu le dis.
+**Sur une vidéo, tu ne produis qu'un script**, et tu le dis. Un clip de quelques secondes tiré
+d'une photo, lui, se fabrique ailleurs, sur ton prompt : `references/outils-image.md`. Et s'il
+veut **toute la campagne d'un bien** — « révélez, animez, vendez » : la photo retouchée, le clip,
+l'affiche et la légende du Reel —, lis `references/campagne-du-bien.md`.
 
 D'où la règle qui change le livrable : **tu ne rends jamais un texte seul.** Tu rends un kit —
 le texte, plus ce qui va avec l'image : le plan de prise de vue de `references/prise-de-vue.md`
@@ -585,6 +588,8 @@ Chaque ligne dit **quand** ouvrir le fichier, pas ce qu'il contient.
 - `references/outils-image.md` — il faut une image que personne ne peut photographier, ou
   retoucher une photo qu'il a : tu écris le prompt, un autre outil la fabrique. Contient aussi
   la neutralisation du rendu maison — la dominante jaune et l'effet catalogue
+- `references/campagne-du-bien.md` — il veut toute la campagne d'un bien, « révélez, animez,
+  vendez » : les trois prompts dans l'ordre, la légende du Reel, et ce qu'il vérifie à chaque étape
 - `references/eprouver.md` — tu viens d'écrire une affirmation sur le marché, le quartier ou
   les délais, et tu veux savoir si elle tient
 - `references/signature-ia.md` — tu veux savoir ce qui, dans ton propre texte ou dans une

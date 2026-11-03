@@ -2,6 +2,18 @@
 
 De la plus récente à la plus ancienne. Ce fichier ne sert qu'à la maintenance.
 
+**8.2 — novembre 2026.** La campagne d'un bien, de la photo au Reel. Outils :
+`immo-reseaux-sociaux` 10.4 ; `immo-parcours` 1.10, `immo-annonce` 3.9 et `immo-penser-savoir` 1.1
+inchangés. Une nouvelle référence, `campagne-du-bien.md`, enchaîne quatre pièces qui partent
+chacune de la précédente : la photo retouchée (offre Google), un clip de quelques secondes tiré
+de cette photo (offre Google, Runway à défaut), l'affiche (offre OpenAI) et la légende du Reel,
+écrite par l'outil lui-même. Les trois prompts y sont complets, avec ce qu'il joint et ce qu'il
+vérifie à chaque étape ; la mention signalant l'image vient toujours de `cadre.md`. Le clip ne se
+publie qu'après avoir été regardé jusqu'au bout. Le guide d'installation dit enfin ce qu'exige
+chaque façon d'installer : le plugin demande un abonnement payant, l'import d'une compétence
+seulement l'exécution de code. Motif : en formation, l'atelier « Révélez, animez, vendez »
+faisait tout cela à la main, et la mallette ne savait pas l'enchaîner.
+
 **8.1 — septembre 2026.** Un en-tête que claude.ai refusait. Outils : `immo-parcours` 1.10,
 `immo-annonce` 3.9, `immo-reseaux-sociaux` 10.3 ; `immo-penser-savoir` 1.1 inchangé. La 7.9 avait
 ajouté la licence GPL 3.0 à l'en-tête de quatre outils sans voir qu'il portait déjà une ligne

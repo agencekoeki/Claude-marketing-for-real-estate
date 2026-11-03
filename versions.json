@@ -1,10 +1,10 @@
 {
-  "mallette": "2.5.1",
+  "mallette": "2.5.2",
   "outils": {
-    "immo-init": "8.1",
+    "immo-init": "8.2",
     "immo-parcours": "1.10",
     "immo-annonce": "3.9",
-    "immo-reseaux-sociaux": "10.3",
+    "immo-reseaux-sociaux": "10.4",
     "immo-penser-savoir": "1.1"
   },
   "depot": "https://github.com/agencekoeki/Claude-marketing-for-real-estate",

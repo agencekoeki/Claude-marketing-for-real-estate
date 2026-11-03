@@ -11,7 +11,7 @@
 - **claude.ai** — download the five files — `.zip` or `.skill`, same content — from the [latest release](https://github.com/agencekoeki/Claude-marketing-for-real-estate/releases/latest) and upload them one by one under Customize › Skills.
 - **Claude Code** — `/plugin marketplace add agencekoeki/Claude-marketing-for-real-estate`, then `/plugin install mallette-immo@sebastien-grillot`. The scripts need Python 3; carousels also need reportlab, Pillow and pypdf.
 
-A paid Claude plan and code execution are required. The skills, their outputs and the documentation are in French.
+Code execution is required in Claude's settings; the plugin, from the marketplace, also needs a paid plan (Pro, Max, Team or Enterprise), while the .zip files can be imported on the free plan too. The skills, their outputs and the documentation are in French.
 
 ## Author
 

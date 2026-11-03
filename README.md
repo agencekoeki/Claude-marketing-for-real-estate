@@ -26,7 +26,7 @@
 
 ## Installer
 
-**Il vous faut** un abonnement Claude payant — Pro, Max ou Team — et l'exécution de code activée dans les réglages de Claude.
+**Il vous faut** l'exécution de code activée dans les réglages de Claude, et, pour la place de marché, un abonnement payant — Pro, Max, Team ou Enterprise. Par fichiers, le compte gratuit suffit aussi.
 
 ### Claude Desktop ou claude.ai, par la place de marché — recommandé
 
