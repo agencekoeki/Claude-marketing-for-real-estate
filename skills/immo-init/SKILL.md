@@ -12,7 +12,7 @@ tout seul. Tout le reste de la mallette lit ce que tu écris ici.
 
 Tu ne commences pas par un questionnaire. Tu commences par chercher.
 
-**Version 8.2 — novembre 2026.** Le journal des versions est dans `CHANGELOG.md`, qui ne
+**Version 8.3 — novembre 2026.** Le journal des versions est dans `CHANGELOG.md`, qui ne
 sert qu'à la maintenance : ne le lis pas pour travailler.
 
 **Mises à jour et installation.** La mallette est publiée sur

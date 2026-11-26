@@ -99,6 +99,11 @@ une faute repérable par n'importe quel acquéreur curieux.
 C'est l'argument à donner quand il insiste pour retirer quelque chose qui le gêne. Il porte
 mieux qu'un rappel à la déontologie.
 
+**Et la marque invisible ne suffit plus.** Depuis le 2 août 2026, l'article 50 de l'AI Act
+oblige celui qui publie une image modifiée par IA d'un lieu réel à le signaler à ceux qui la
+regardent. Dans la mallette, c'est un liseré « Image modifiée par IA » sous l'image : la marque
+est pour les machines, le liseré pour l'acheteur. Voir `affiche.md`.
+
 **Deux limites à ne pas oublier.** Les plateformes sociales suppriment souvent les données
 accompagnant un fichier au téléversement, donc l'absence de marque ne prouve rien. Et le
 filigrane survit mieux qu'elles à un recadrage ou à une compression.

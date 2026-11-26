@@ -30,9 +30,12 @@ Les faits viennent de l'annonce et de nulle part ailleurs. Un fait absent devien
 « à compléter », sur l'affiche comme dans la légende.
 
 La mention qui signale l'image : **son texte exact vient de `cadre.md`**. Les prompts
-ci-dessous écrivent « Image retouchée » ; si `cadre.md` porte une autre formule, tu la
-remplaces avant de les lui donner. Si la case est vide, tu gardes « Image retouchée » et tu le
-lui signales à la livraison.
+ci-dessous écrivent « Image modifiée par IA » ; si `cadre.md` porte une autre formule, tu la
+remplaces avant de les lui donner. Si la case est vide, tu gardes « Image modifiée par IA » et tu
+le lui signales à la livraison. Cette mention est une obligation légale depuis le 2 août 2026
+(AI Act, article 50), pas une politesse : sa forme, un liseré sous l'image, et les mentions
+obligatoires de l'affiche sont dans `affiche.md`. La photo se retouche dans Gemini, jamais dans
+ChatGPT, qui redessine l'image au lieu de la retoucher.
 
 ---
 
@@ -51,7 +54,7 @@ Obtenir une photo plus lumineuse et plus nette, prête pour Instagram, qui montr
 2. Corrige la lumière : éclaircis les zones sombres, équilibre les couleurs, rends les blancs propres, sans effet artificiel.
 3. Redresse les lignes verticales si la photo penche, et améliore la netteté.
 4. Retire seulement les petits objets du quotidien qui encombrent : câble, papier, sac, objet personnel, photo de famille.
-5. Ajoute en bas à droite, en petit et discrètement, la mention « Image retouchée ».
+5. Ajoute sous l'image un liseré : une bande blanche fine sur toute la largeur, avec, en texte foncé et lisible sur un téléphone, la mention « Image modifiée par IA ».
 RÉSULTAT ATTENDU
 L'image retouchée, au même format que la photo d'origine. Puis, sous l'image, 2 lignes maximum : ce que tu as changé.
 EXEMPLES
@@ -92,7 +95,7 @@ Mouvement voulu : un travelling avant très lent.
 LEVER LES AMBIGUÏTÉS
 - Tu n'ajoutes ni personne, ni animal, ni meuble, ni objet, ni texte, ni logo.
 - Tu ne changes ni la vue, ni la taille de la pièce, ni les matériaux, ni l'état du bien.
-- La mention « Image retouchée » reste lisible en bas à droite.
+- Le liseré « Image modifiée par IA » reste lisible en bas de l'image.
 - Si un détail risque de changer le bien, tu fais le choix le plus prudent.
 ```
 
@@ -120,7 +123,7 @@ Créer une affiche moderne et élégante qui donne envie de visiter, à publier 
 ÉTAPES
 1. Ouvre le lien et relève dans l'annonce : le type de bien, la ville ou le quartier, la surface, le nombre de pièces, le prix, les honoraires et qui les paie, la classe énergie et la classe climat.
 2. Choisis une accroche de 6 mots maximum et les 3 atouts les plus forts, en 3 à 5 mots chacun.
-3. Crée l'image de l'affiche, au format portrait 4:5 d'Instagram (si tu ne sais faire que du 2:3, garde tout le texte dans la zone centrale, loin des bords du haut et du bas, qu'Instagram coupe) : la photo en grand, l'accroche en haut, les 3 atouts, le prix bien visible ; puis, en petit : les honoraires, la classe énergie et la classe climat écrites en simple texte (par exemple « DPE : D · GES : C »), sans dessiner l'étiquette énergie, et un cadre vide « Logo et téléphone de l'agence ».
+3. Crée l'image de l'affiche, au format portrait 4:5 d'Instagram (si tu ne sais faire que du 2:3, garde tout le texte dans la zone centrale, loin des bords du haut et du bas, qu'Instagram coupe) : la photo en grand, l'accroche en haut, les 3 atouts, le prix bien visible ; puis, en petit, sur un bandeau en bas : les honoraires (si l'acquéreur les paie : prix honoraires inclus, prix hors honoraires et pourcentage), la classe énergie et la classe climat écrites en simple texte (par exemple « DPE : D · GES : C »), sans dessiner l'étiquette énergie, les dépenses annuelles d'énergie estimées avec leur année de référence, la mention « Logement à consommation énergétique excessive » si la classe est F ou G, la phrase « Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : www.georisques.gouv.fr », les informations de copropriété si le bien en dépend, et un cadre vide « Logo, SIREN et téléphone de l'agence ».
 4. Style : sobre et haut de gamme, comme l'affiche d'une agence de prestige. Deux couleurs au maximum, tirées de la photo, plus du blanc. Une seule police sans empattement, en deux tailles au maximum, lisible à 2 mètres, avec un fort contraste. Le texte sur un bandeau ou un aplat de couleur, jamais sur une zone chargée de la photo. Des marges larges : aucun mot coupé ni collé au bord. Ni dégradé, ni icône 3D, ni émoji, ni effet brillant.
 RÉSULTAT ATTENDU
 L'image de l'affiche, puis, en dessous, le texte exact que tu as écrit sur l'affiche, pour que je puisse le vérifier. Puis relis l'image mot par mot : si un mot, une lettre ou un chiffre de l'image diffère de ce texte, signale-le en une ligne.
@@ -129,10 +132,10 @@ Des accroches dans l'esprit voulu : « Et si c'était chez vous ? » · « Le ce
 À éviter : « Affaire à saisir », « Coup de cœur assuré », les points d'exclamation.
 LEVER LES AMBIGUÏTÉS
 - Tu ne me poses aucune question : tu crées l'affiche directement.
-- Tu gardes ma photo telle qu'elle est : tu ne redessines pas le bien, tu n'ajoutes ni meuble, ni vue, ni jardin, ni piscine, ni personne, ni ciel de coucher de soleil : même cadrage, mêmes fenêtres, mêmes portes, mêmes matériaux. Pas de « look IA » : ni HDR, ni couleurs saturées, ni teinte jaune ou orangée sur toute l'image, ni sols trop brillants ; les blancs restent blancs, les lignes droites restent droites. Si ma photo porte la mention « Image retouchée », elle reste visible sur l'affiche.
+- Tu gardes ma photo telle qu'elle est : tu ne redessines pas le bien, tu n'ajoutes ni meuble, ni vue, ni jardin, ni piscine, ni personne, ni ciel de coucher de soleil : même cadrage, mêmes fenêtres, mêmes portes, mêmes matériaux. Pas de « look IA » : ni HDR, ni couleurs saturées, ni teinte jaune ou orangée sur toute l'image, ni sols trop brillants ; les blancs restent blancs, les lignes droites restent droites. Si ma photo porte le liseré « Image modifiée par IA », il reste visible sur l'affiche.
 - Tous les chiffres de l'affiche viennent de l'annonce, recopiés à l'identique. Le texte est en français correct, accents compris, chaque mot écrit en entier. Un chiffre absent ne s'invente pas : tu écris « à compléter ».
 - Si tu ne peux pas ouvrir le lien, tu ne devines rien : tu me le dis en une ligne et tu me demandes de coller le texte de l'annonce.
-- Sur l'affiche, aucun autre texte que l'accroche, les 3 atouts, le prix, les honoraires, le DPE, le cadre vide de l'agence et la mention « Image retouchée » : ni faux logo, ni nom d'agence inventé, ni numéro de téléphone, ni adresse de site, ni QR code, ni petit texte décoratif. Aucun nom, aucune donnée personnelle.
+- Sur l'affiche, aucun autre texte que l'accroche, les 3 atouts, le prix, les honoraires, le DPE, les autres mentions obligatoires, le cadre vide de l'agence et le liseré « Image modifiée par IA » : ni faux logo, ni nom d'agence inventé, ni numéro de téléphone, ni adresse de site, ni QR code, ni petit texte décoratif. Aucun nom, aucune donnée personnelle.
 - Aucune promesse de chiffre ou de performance : ni délai de vente, ni « prix imbattable ».
 - Pour le reste (accroche, couleurs, atouts choisis), tu fais l'hypothèse la plus probable et tu me la signales à la toute fin, en une seule ligne qui commence par « Hypothèses : ».
 ```
@@ -154,7 +157,7 @@ Celle-là, tu l'écris, avec ce que tu sais déjà de lui : `ecriture.md` pour l
   Instagram n'est pas cliquable ;
 - huit hashtags locaux, à part ;
 - en dernière ligne, la mention de `cadre.md` pour une image retouchée et un clip généré. À
-  défaut : « Image retouchée · vidéo générée par IA à partir d'une photo réelle ».
+  défaut : « Image modifiée par IA · vidéo générée par IA à partir d'une photo réelle ».
 
 Entre 120 et 160 mots, trois émojis au plus. Aucun fait inventé.
 
@@ -168,7 +171,7 @@ Maintenant, écris la légende du Reel Instagram qui accompagnera la vidéo de c
 3. Les faits de l'annonce : surface, pièces, prix, honoraires et qui les paie, DPE et GES.
 4. Un seul appel à l'action : message privé ou lien en bio.
 5. 8 hashtags locaux, à part.
-6. En dernière ligne : « Image retouchée · vidéo générée par IA à partir d'une photo réelle ».
+6. En dernière ligne : « Image modifiée par IA · vidéo générée par IA à partir d'une photo réelle ».
 Entre 120 et 160 mots, 3 émojis au maximum. Aucun fait inventé : un fait absent devient « à compléter ». Tu ne me poses aucune question.
 ```
 
@@ -186,7 +189,7 @@ autre chose, c'est lui qui a raison**.
   de la photo (`visuels.md`).
 - **Il veut aller plus loin** : IACréa (iacrea.com) est pensé pour les agents immobiliers —
   home staging virtuel, désencombrement, vidéo à partir de photos, avec un essai gratuit. Une
-  pièce meublée par l'IA porte toujours la mention « Ameublement virtuel », sur la photo et
+  pièce meublée par l'IA porte toujours la mention « Ameublement virtuel par IA », sur la photo et
   dans l'annonce, avec le texte exact de `cadre.md` s'il en porte un.
 
 ## Livrer

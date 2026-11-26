@@ -2,6 +2,16 @@
 
 De la plus récente à la plus ancienne. Ce fichier ne sert qu'à la maintenance.
 
+**8.3 — novembre 2026.** L'affiche d'un bien, conforme. Outils :
+`immo-reseaux-sociaux` 10.5 ; `immo-parcours` 1.10, `immo-annonce` 3.9 et `immo-penser-savoir` 1.1
+inchangés. Une nouvelle référence, `affiche.md` : le liseré « Image modifiée par IA » sous toute
+image modifiée par une IA (AI Act, article 50, applicable depuis le 2 août 2026), les mentions
+obligatoires d'une affiche de vente (honoraires, DPE et dépenses d'énergie, Géorisques,
+copropriété, SIREN de l'agence) et la vérification en quatre regards. La photo se retouche dans
+Gemini, jamais dans ChatGPT, qui redessine ; changer la saison est permis dans un visuel de
+communication, avec le liseré, jamais sur les photos de l'annonce. La mention par défaut devient
+« Image modifiée par IA » partout dans `campagne-du-bien.md`.
+
 **8.2 — novembre 2026.** La campagne d'un bien, de la photo au Reel. Outils :
 `immo-reseaux-sociaux` 10.4 ; `immo-parcours` 1.10, `immo-annonce` 3.9 et `immo-penser-savoir` 1.1
 inchangés. Une nouvelle référence, `campagne-du-bien.md`, enchaîne quatre pièces qui partent

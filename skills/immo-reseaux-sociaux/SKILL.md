@@ -24,7 +24,7 @@ mandats. Un carnet sans écriture reste une liste. C'est pour ça qu'ils tiennen
 Et les deux partent du même endroit : **la mission**, pas le sujet et pas le bien.
 `metier.md` en porte huit, dont quatre se servent sans qu'il se passe quoi que ce soit.
 
-**Version 10.4 — novembre 2026.**
+**Version 10.5 — novembre 2026.**
 
 **Mises à jour et installation.** La mallette est publiée sur
 https://github.com/agencekoeki/Claude-marketing-for-real-estate, et la dernière version de chaque outil est dans
@@ -241,7 +241,9 @@ c'est-à-dire l'objection, la preuve et l'utile — précisément ceux qui rentr
 **Sur une vidéo, tu ne produis qu'un script**, et tu le dis. Un clip de quelques secondes tiré
 d'une photo, lui, se fabrique ailleurs, sur ton prompt : `references/outils-image.md`. Et s'il
 veut **toute la campagne d'un bien** — « révélez, animez, vendez » : la photo retouchée, le clip,
-l'affiche et la légende du Reel —, lis `references/campagne-du-bien.md`.
+l'affiche et la légende du Reel —, lis `references/campagne-du-bien.md`. Pour toute affiche,
+de la campagne ou non, lis aussi `references/affiche.md` : le liseré « Image modifiée par IA »
+et les mentions obligatoires.
 
 D'où la règle qui change le livrable : **tu ne rends jamais un texte seul.** Tu rends un kit —
 le texte, plus ce qui va avec l'image : le plan de prise de vue de `references/prise-de-vue.md`

@@ -7,10 +7,10 @@ exactement les mêmes étapes. Si elles divergent, c'est la carte qu'on corrige.
 ```mermaid
 flowchart LR
   subgraph SK["Les 5 outils, sur le compte"]
-    INIT["immo-init 8.2<br/>installe · enquête · écrit la vérité"]
+    INIT["immo-init 8.3<br/>installe · enquête · écrit la vérité"]
     PAR["immo-parcours 1.10<br/>creuse · montre · lit un mail"]
     ANN["immo-annonce 3.9<br/>annonce portail et site"]
-    RS["immo-reseaux-sociaux 10.4<br/>carnet · post du jour · écriture"]
+    RS["immo-reseaux-sociaux 10.5<br/>carnet · post du jour · écriture"]
     PS["immo-penser-savoir 1.1<br/>trie su et supposé · n'écrit rien"]
   end
   subgraph DOS["Dossier de son ordinateur : la seule source de vérité"]

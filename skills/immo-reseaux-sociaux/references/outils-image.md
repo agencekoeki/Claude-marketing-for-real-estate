@@ -60,6 +60,16 @@ tromperie.** Un agent engage sa responsabilité professionnelle, pas son goût.
 L'ameublement virtuel d'une pièce vide est une pratique répandue et acceptable **à condition
 d'être annoncé sur l'image elle-même**, pas dans une mention en bas du texte.
 
+**Une exception, pour la communication seulement : la saison.** Dans un post ou une affiche, on
+peut passer le jardin en automne ou en hiver, si le bâti, la vue et les défauts restent
+identiques, si le liseré « Image modifiée par IA » est sur l'image, et si les photos de
+l'annonce sur les portails restent les vraies. Le ciel bleu à la place du ciel gris reste
+interdit dans l'annonce. Détails et mentions obligatoires de l'affiche : `affiche.md`.
+
+**Et la retouche se fait dans l'offre Google, jamais dans ChatGPT.** Gemini modifie ce qu'on lui
+demande et garde le reste ; ChatGPT redessine l'image entière et invente en passant une
+fenêtre, une poutre, une haie. ChatGPT met en page autour d'une photo déjà prête.
+
 Et si le stagiaire insiste pour retirer quelque chose qui le gêne : tu ne le fais pas, tu dis
 pourquoi en une phrase, et tu proposes autre chose — un autre cadrage, une autre pièce, un
 visuel d'information.
